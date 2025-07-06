@@ -7,7 +7,7 @@ DROP POLICY IF EXISTS "Users can delete their own workspaces" ON workspaces;
 DROP POLICY IF EXISTS "Public can view shared workspaces" ON workspaces;
 
 -- Create more permissive policies for debugging
-CREATE POLICY "Users can create workspaces" ON workspaces
+CREATE  POLICY "Users can create workspaces" ON workspaces
   FOR INSERT 
   WITH CHECK (auth.uid() IS NOT NULL AND auth.uid() = user_id);
 
