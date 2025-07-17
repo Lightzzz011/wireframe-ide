@@ -10,9 +10,7 @@ const nextConfig: NextConfig = {
         crypto: false,
       };
     }
-
     return config;
   },
 };
-
 export default nextConfig;
