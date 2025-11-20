@@ -9,7 +9,6 @@ CREATE TABLE workspaces (
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
--- Create files table
 CREATE TABLE files (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   workspace_id UUID REFERENCES workspaces(id) ON DELETE CASCADE,
